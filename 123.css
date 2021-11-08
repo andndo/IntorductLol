@@ -1,0 +1,94 @@
+body, ul, h2, p{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    background-color: #111;
+    color:#999;
+}
+
+.wrapper{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-item{
+    flex-basis: 100px;
+    margin: 0 10px;
+    transition: all .4s;
+}
+
+.team-item img{
+    width:100%
+}
+
+.profile:before{
+    content:' ';
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.95+0,0+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+}
+.profile {
+    background-color: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-contents{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+}
+
+.profile-contents p{
+    color: #fff;
+    font-size: 10px;
+    min-width: 140px;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1;
+    transition: all .4s;
+    opacity: 0;
+    transition-delay: .2s;
+}
+
+.team-item:hover .profile-contents p{
+    max-height: 6em;
+    opacity: 1;
+}
+
+.team-item:hover{
+    flex-basis: 150px;
+    margin: 0 20px;
+}
+
+.profile-contents h2 span{
+    display:block;
+    font-size: 12px;
+}
+.profile-contents h2{
+    font-size: 20px;
+}
